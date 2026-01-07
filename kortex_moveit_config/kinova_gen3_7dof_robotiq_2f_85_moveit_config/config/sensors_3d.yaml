@@ -1,0 +1,22 @@
+sensors:
+  - d435_camera_pointcloud
+  - d435_camera_depth_image
+d435_camera_pointcloud:
+  sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+  point_cloud_topic: /sensors/d435_camera/points/dum
+  max_range: 5.0
+  point_subsample: 1
+  padding_offset: 0.1
+  padding_scale: 1.0
+  max_update_rate: 1.0
+  filtered_cloud_topic: ""
+d435_camera_depth_image:
+  sensor_plugin: occupancy_map_monitor/DepthImageOctomapUpdater
+  image_topic: /sensors/d435_camera/image/dum
+  queue_size: 5
+  near_clipping_plane_distance: 0.3
+  far_clipping_plane_distance: 5.0
+  shadow_threshold: 0.2
+  padding_scale: 1.0
+  max_update_rate: 1.0
+  filtered_cloud_topic: ""

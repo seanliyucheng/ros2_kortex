@@ -61,14 +61,17 @@ def launch_setup(context, *args, **kwargs):
     )
 
     moveit_config.moveit_cpp.update({"use_sim_time": use_sim_time.perform(context) == "true"})
-
+    move_group_capabilities = {
+        "capabilities": "move_group/ExecuteTaskSolutionCapability"
+    }
     move_group_node = Node(
         package="moveit_ros_move_group",
         executable="move_group",
         output="screen",
         parameters=[
             moveit_config.to_dict(),
-        ],
+            move_group_capabilities
+        ]
     )
 
     # Static TF

@@ -1,0 +1,13 @@
+# Allowed Collision Matrix additions for octomap
+# This configuration allows specific robot links to pass through the octomap
+# without triggering collision detection
+
+# Links that should be allowed to collide with the octomap
+# (typically links that are close to or touching the mounting surface)
+allowed_collision_matrix:
+  - link1: base_link
+    link2: <octomap>
+    allowed: true
+  - link1: shoulder_link
+    link2: <octomap>
+    allowed: true

@@ -91,6 +91,8 @@ def generate_launch_description():
             "--ros-args",
             "--log-level",
             "fatal",
+            "--capabilities",
+        "move_group/ExecuteTaskSolutionCapability",
         ],  # MoveIt is spamming the log because of unknown '*_mimic' joints
         condition=IfCondition(launch_rviz),
     )
