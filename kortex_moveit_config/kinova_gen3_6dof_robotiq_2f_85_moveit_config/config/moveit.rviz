@@ -5,6 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
+        - /MotionPlanning1/Planned Path1
         - /TF1
         - /TF1/Frames1
       Splitter Ratio: 0.5
@@ -156,7 +157,7 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-        Loop Animation: true
+        Loop Animation: false
         Robot Alpha: 0.5
         Robot Color: 150; 50; 150
         Show Robot Collision: false
@@ -310,8 +311,6 @@ Visualization Manager:
           Value: true
         forearm_link:
           Value: false
-        object_frame:
-          Value: true
         robotiq_85_base_link:
           Value: false
         robotiq_85_left_finger_link:
@@ -366,8 +365,6 @@ Visualization Manager:
                               robotiq_85_right_finger_link:
                                 robotiq_85_right_finger_tip_link:
                                   {}
-          object_frame:
-            {}
       Update Interval: 0
       Value: true
   Enabled: true
